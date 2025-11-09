@@ -1,12 +1,5 @@
-import axios from 'axios';
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 dotenv.config();
 
-const tmdb = axios.create({
-    baseURL: process.env.TMDB_BASE_URL,
-    headers: {
-        Authorization: `Bearer ${process.env.TMDB_API_KEY}`,
-    },
-});
-
-export default tmdb;
+export const TMDB_BASE_URL = "https://api.themoviedb.org/3";
+export const TMDB_API_KEY = process.env.TMDB_API_KEY;
